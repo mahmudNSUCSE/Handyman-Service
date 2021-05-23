@@ -1,0 +1,5 @@
+{
+    "require": {
+        "cr/hashcli": "dev-master"
+    }
+}

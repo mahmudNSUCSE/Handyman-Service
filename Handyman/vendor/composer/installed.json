@@ -1,0 +1,60 @@
+{
+    "packages": [
+        {
+            "name": "cr/hashcli",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DailyMatters/hashCLI.git",
+                "reference": "6ab58fab13b9d54c94a764dbf3fa6812b75d14d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DailyMatters/hashCLI/zipball/6ab58fab13b9d54c94a764dbf3fa6812b75d14d8",
+                "reference": "6ab58fab13b9d54c94a764dbf3fa6812b75d14d8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "time": "2016-12-14T18:39:49+00:00",
+            "default-branch": true,
+            "bin": [
+                "src/hashCLI"
+            ],
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cláudio Ribeiro",
+                    "email": "claudio.santos.ribeiro@gmail.com"
+                }
+            ],
+            "description": "HashCLI - PHP CLI Tool For hashing",
+            "keywords": [
+                "cli",
+                "hash"
+            ],
+            "support": {
+                "issues": "https://github.com/DailyMatters/hashCLI/issues",
+                "source": "https://github.com/DailyMatters/hashCLI/tree/master"
+            },
+            "install-path": "../cr/hashcli"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
