@@ -1,34 +1,27 @@
-<?php declare(strict_types=1);
-use PHPUnit\Framework\TestCase;
+<?php
 
-final class StackTest extends TestCase
+class handymanUser extends handyman
 {
-    public function testEmpty(): array
-    {
-        $stack = [];
-        $this->assertEmpty($stack);
-
-        return $stack;
-    }
+    /**
+     * The name of the handyman's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = User::class;
 
     /**
-     * @depends testEmpty
+     * Define the model's default state.
+     *
+     * @return array
      */
-    public function testPush(array $stack): array
+    public function definition()
     {
-        array_push($stack, 'foo');
-        $this->assertSame('foo', $stack[count($stack)-1]);
-        $this->assertNotEmpty($stack);
-
-        return $stack;
-    }
-
-    /**
-     * @depends testPush
-     */
-    public function testPop(array $stack): void
-    {
-        $this->assertSame('foo', array_pop($stack));
-        $this->assertEmpty($stack);
+        return [
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'email_verified_at' => now(),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'remember_token' => Str::random(10),
+        ];
     }
 }
